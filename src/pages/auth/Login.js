@@ -1,14 +1,94 @@
-import React from 'react';
-;
-
+import React,{useState} from 'react';
+import bg from "../../assests/bg.mp4"
+import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
+import { Button } from '../../components/buttons/Button';
+import google from "../../assests/google.png"
+import facebook from "../../assests/facebook.png"
+import { IconContext } from 'react-icons/lib';
 function Login() {
+  const [values, setValues] = useState({
+    showPass: false,
+  });
+  const handlePassVisibilty = () => {
+    setValues({
+      ...values,
+      showPass: !values.showPass,
+    });
+  };
   return (
     <div>
       <div className='w-full h-screen'>
         <div className='grid grid-cols-6'>
-          <div className='col-span-2  h-[100vh]'>
-            <h3 className='font-bold text-[28px] p-6 text-[#F7512E]'>CRYZPTO</h3>
+        <div className="flex flex-col justify-center items-center  bg-[#030205] col-span-2">
+          <div className="flex justify-center items-center gap-5 mb-4">
+            <Button variant="primary" imgSrc={google} imgAlt="google">
+              Google
+            </Button>
+            <Button variant="primary" imgSrc={facebook} imgAlt="google">
+              Facebook
+            </Button>
           </div>
+          <div className="flex justify-center items-center font-medium">Or</div>
+          <form className="px-4 sm:px-6 lg:px-10 xl:px-14 w-[100%]">
+           
+            <div className="mb-4">
+              <label className="mb-3 text-base font-medium text-[#F7512E]">
+                Email Address
+              </label>
+              <input
+                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF]  bg-[#141414] rounded-lg"
+                type="text"
+               
+              />
+            </div>
+            
+            <div className="mb-6 relative text-[#F7512E]">
+              <label className="mb-3 text-base font-medium">Password</label>
+              <input
+                type={values.showPass ? "text" : "password"}
+                label="Password"
+                required
+                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF] placeholder:text-[#FFF] placeholder:text-sm bg-[#141414] rounded-lg"
+              />
+              <IconContext.Provider value={{color:'#F7512E'}}>
+              <span className="absolute right-[8px] top-[40px] text-white cursor-pointer">
+                <span onClick={handlePassVisibilty}>
+                {values.showPass ? <IoEyeSharp /> : <IoEyeOffSharp />}
+                </span>
+              </span>
+              </IconContext.Provider>
+              
+            </div>
+          <div className="flex justify-between items-center">
+              <div className="flex items-start gap-[10px] text-base font-medium max-w-[340px]">
+              <input type="checkbox" className="mt-[5px]" />
+              <h5 className="text-[#F7512E]">
+                Remember me
+              </h5>
+            </div>
+            <a href="/recover" className=" text-[#F7512E]">
+            Forgot Password
+              </a>
+          </div>
+            <div className="sm:my-6 my-4 ">
+              <Button
+                variant="secondary"
+                paddingLess="true"
+                className="w-[100%] h-[48px] text-[#141414] text-base"
+              >
+               Login
+              </Button>
+            </div>
+
+            <h5 className=" text-center text-base font-medium text-[#F7512E]">
+            Already have an account?{" "}
+              <a href="/" className="underline text-[#fcb8aa75]">
+                Login
+              </a>
+            </h5>
+          </form>
+        </div>
+          
           <div className='col-span-4 relative h-screen'>
           <div className='absolute top-0 left-0 w-full h-full overflow-hidden bg-black'>
           <video
@@ -18,7 +98,7 @@ function Login() {
             muted
             type='video/mp4'
           >
-            <source src='https://res.cloudinary.com/dd9uujnfm/video/upload/v1699467232/bg2_aubydk.mp4' />
+            <source src={bg} />
           </video>
         </div>
 
