@@ -18,7 +18,7 @@ function Login() {
   return (
     <div>
       <div className='w-full h-screen'>
-        <div className='grid grid-cols-6'>
+        <div className='grid grid-cols-1  sm:grid-cols-6'>
         <div className="flex flex-col justify-center items-center  bg-[#030205] col-span-2">
           <div className="flex justify-center items-center gap-5 mb-4">
             <Button variant="primary" imgSrc={google} imgAlt="google">
@@ -29,10 +29,10 @@ function Login() {
             </Button>
           </div>
           <div className="flex justify-center items-center font-medium">Or</div>
-          <form className="px-4 sm:px-6 lg:px-10 xl:px-14 w-[100%]">
+          <form className="px-4 sm:px-6 w-[100%]">
            
             <div className="mb-4">
-              <label className="mb-3 text-base font-medium text-[#F7512E]">
+              <label className="mb-3 text-base font-medium text-[#ffffff]">
                 Email Address
               </label>
               <input
@@ -42,7 +42,7 @@ function Login() {
               />
             </div>
             
-            <div className="mb-6 relative text-[#F7512E]">
+            <div className="mb-6 relative text-[#ffffff]">
               <label className="mb-3 text-base font-medium">Password</label>
               <input
                 type={values.showPass ? "text" : "password"}
@@ -62,11 +62,11 @@ function Login() {
           <div className="flex justify-between items-center">
               <div className="flex items-start gap-[10px] text-base font-medium max-w-[340px]">
               <input type="checkbox" className="mt-[5px]" />
-              <h5 className="text-[#F7512E]">
+              <h5 className="text-[#ffffff]">
                 Remember me
               </h5>
             </div>
-            <a href="/recover" className=" text-[#F7512E]">
+            <a href="/recover" className=" text-[#ffffff]">
             Forgot Password
               </a>
           </div>
@@ -82,7 +82,7 @@ function Login() {
 
             <h5 className=" text-center text-base font-medium text-[#F7512E]">
             Already have an account?{" "}
-              <a href="/" className="underline text-[#fcb8aa75]">
+              <a href="/" className="underline text-[#ffffff]">
                 Login
               </a>
             </h5>
