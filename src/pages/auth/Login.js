@@ -1,5 +1,5 @@
 import React from 'react';
-import bg1 from '../../assests/bg2.mp4';
+;
 
 function Login() {
   return (
@@ -18,7 +18,7 @@ function Login() {
             muted
             type='video/mp4'
           >
-            <source src={bg1} />
+            <source src='https://res.cloudinary.com/dd9uujnfm/video/upload/v1699467232/bg2_aubydk.mp4' />
           </video>
         </div>
 
