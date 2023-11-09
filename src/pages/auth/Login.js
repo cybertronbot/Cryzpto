@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import bg from "../../assests/bg.mp4"
+import bg from "../../assests/React App.mp4"
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import { Button } from '../../components/buttons/Button';
 import google from "../../assests/google.png"
