@@ -80,7 +80,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-[100%] sm:hidden flex justify-center">
+      <div className="w-[100%] sm:hidden flex justify-center mt-4">
       <div className=" w-[80px] h-[80px] border  border-[#969696] rounded-full">
 
 </div>
