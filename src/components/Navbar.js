@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <div>
       <div className="sm:px-20 px-4 sm:py-10 py-5 flex gap-2 w-[100%] sm:justify-center justify-between items-center">
-        <div className="sm:w-[280px] w-[150px] h-[35px] flex justify-center items-center border  border-[#969696] rounded-[8px]">
+        <div className="sm:w-[280px] w-[100px] h-[35px] flex justify-center items-center border  border-[#969696] rounded-[8px]">
           <div className="flex gap-1 items-center">
             <div>
               <div className="relative">
