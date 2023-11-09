@@ -35,7 +35,7 @@ function Hero() {
               Al-powered system suggests personalized <br /> content based on
               user preference
             </h5>
-            <h2 className="text-[60px] w-[700px]  text-center leading-[70px] font-normal text-[#C3C3C3]">
+            <h2 className="text-[60px]  w-[700px]  text-center leading-[70px] font-normal text-[#C3C3C3]">
               Next level of{" "}
               <span className="text-[#F7512E]"> &nbsp; crypto</span> and
               <span className="text-[#F7512E]"> &nbsp; fintech</span> product
@@ -80,6 +80,21 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div className="w-[100%] sm:hidden flex justify-center">
+      <div className=" w-[80px] h-[80px] border  border-[#969696] rounded-full">
+
+</div>
+      <div className=" w-[80px] h-[80px] border  border-[#969696] rounded-full">
+
+</div>
+      <div className=" w-[80px] h-[80px] border  border-[#969696] rounded-full">
+
+</div>
+      <div className=" w-[80px] h-[80px] border  border-[#969696] rounded-full">
+
+</div>
+      </div>
+     
     </div>
   );
 }
