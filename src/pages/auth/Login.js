@@ -95,6 +95,7 @@ function Login() {
             className='min-h-full min-w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-cover'
             autoPlay
             loop
+            
             muted
             type='video/mp4'
           >
