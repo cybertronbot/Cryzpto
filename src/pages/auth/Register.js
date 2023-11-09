@@ -19,7 +19,7 @@ function Register() {
     <div>
       <div className='w-full h-screen'>
         <div className='grid grid-cols-1  sm:grid-cols-6'>
-        <div className="flex flex-col justify-center items-center py-8 sm:py-0 bg-[#030205] col-span-2 sm:order-first order-last">
+        <div className="flex flex-col h-screen justify-center items-center py-8 sm:py-0 bg-[#030205] col-span-2 sm:order-first order-last">
           <div className="flex justify-center items-center gap-5 mb-4">
             <Button variant="primary" imgSrc={google} imgAlt="google">
               Google
@@ -97,7 +97,7 @@ function Register() {
           </form>
         </div>
           
-          <div className='col-span-4 relative sm:h-screen h-[40vh]'>
+          <div className='sm:grid hidden col-span-4 relative sm:h-screen h-[40vh]'>
           <div className='absolute top-0 left-0 w-full h-full overflow-hidden bg-black'>
           <video
             className='min-h-full min-w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] object-cover'
