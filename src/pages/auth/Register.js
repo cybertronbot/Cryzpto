@@ -29,7 +29,7 @@ function Register() {
             </Button>
           </div>
           <div className="flex justify-center items-center font-medium">Or</div>
-          <form className="px-4 sm:px-6  w-[100%]">
+          <form className="px-4 sm:px-6 xl:px-14  w-[100%]">
             <div className="mb-4">
               <label className="mb-3 text-base font-medium text-white">Full Name</label>
               <input
@@ -70,10 +70,10 @@ function Register() {
                 </span>
               </span>
             </div>
-            <div className="flex items-start gap-[10px] text-base font-medium w-[100%] sm:max-w-[340px]">
+            <div className="flex items-start gap-[10px] text-base font-medium w-[100%] ">
               <input type="checkbox" className="mt-[5px]" />
               <h5 className="text-white">
-                By creating an account you agree to the{" "}
+                By creating an account you agree to the
                 <a className="text-[#ffffff]">terms of use</a> and our
                 <a className="text-[#ffffff]"> privacy policy.</a>
               </h5>

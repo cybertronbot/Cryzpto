@@ -29,7 +29,7 @@ function Login() {
             </Button>
           </div>
           <div className="flex justify-center items-center font-medium">Or</div>
-          <form className="px-4 sm:px-6 w-[100%]">
+          <form className="px-4 sm:px-6 xl:px-14 w-[100%]">
            
             <div className="mb-4">
               <label className="mb-3 text-base font-medium text-[#ffffff]">
