@@ -29,7 +29,7 @@ function Register() {
             </Button>
           </div>
           <div className="flex justify-center items-center font-medium">Or</div>
-          <form className="px-4 sm:px-6 lg:px-10 xl:px-14 w-[100%]">
+          <form className="px-4 sm:px-6  w-[100%]">
             <div className="mb-4">
               <label className="mb-3 text-base font-medium text-white">Full Name</label>
               <input
@@ -90,7 +90,7 @@ function Register() {
 
             <h5 className=" text-center text-base font-medium text-white">
               Already have an account?{" "}
-              <a href="/login" className="underline text-[#ffffff]">
+              <a href="/auth/login" className="underline text-[#ffffff]">
                 Login
               </a>
             </h5>

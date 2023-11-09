@@ -81,9 +81,9 @@ function Login() {
             </div>
 
             <h5 className=" text-center text-base font-medium text-[#F7512E]">
-            Already have an account?{" "}
-              <a href="/" className="underline text-[#ffffff]">
-                Login
+            Don't have an account?{" "}
+              <a href="/auth/register" className="underline text-[#ffffff]">
+                Signup
               </a>
             </h5>
           </form>
