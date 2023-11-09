@@ -4,8 +4,8 @@ import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import { Button } from '../../components/buttons/Button';
 import google from "../../assests/google.png"
 import facebook from "../../assests/facebook.png"
-import { IconContext } from 'react-icons/lib';
-function Login() {
+
+function Register() {
   const [values, setValues] = useState({
     showPass: false,
   });
@@ -29,60 +29,68 @@ function Login() {
             </Button>
           </div>
           <div className="flex justify-center items-center font-medium">Or</div>
-          <form className="px-4 sm:px-6 w-[100%]">
-           
+          <form className="px-4 sm:px-6 lg:px-10 xl:px-14 w-[100%]">
             <div className="mb-4">
-              <label className="mb-3 text-base font-medium text-[#ffffff]">
+              <label className="mb-3 text-base font-medium text-white">Full Name</label>
+              <input
+                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF] placeholder:text-[#FFF] placeholder:text-sm bg-[#141414] rounded-lg"
+                type="text"
+                placeholder="Limo"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="mb-3 text-base font-medium text-white">
                 Email Address
               </label>
               <input
-                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF]  bg-[#141414] rounded-lg"
+                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF] placeholder:text-[#FFF] placeholder:text-sm bg-[#141414] rounded-lg"
                 type="text"
-               
+                placeholder="example@gmail.com"
               />
             </div>
-            
-            <div className="mb-6 relative text-[#ffffff]">
-              <label className="mb-3 text-base font-medium">Password</label>
+            <div className="mb-4">
+              <label className="mb-3 text-base font-medium  text-white">Username</label>
+              <input
+                className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF] placeholder:text-[#FFF] placeholder:text-sm bg-[#141414] rounded-lg"
+                type="text"
+                placeholder="isaaclimo"
+              />
+            </div>
+            <div className="mb-6 relative ">
+              <label className="mb-3 text-base font-medium text-white">Password</label>
               <input
                 type={values.showPass ? "text" : "password"}
                 label="Password"
                 required
                 className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%] text-[#FFF] placeholder:text-[#FFF] placeholder:text-sm bg-[#141414] rounded-lg"
               />
-              <IconContext.Provider value={{color:'#F7512E'}}>
               <span className="absolute right-[8px] top-[40px] text-white cursor-pointer">
                 <span onClick={handlePassVisibilty}>
                 {values.showPass ? <IoEyeSharp /> : <IoEyeOffSharp />}
                 </span>
               </span>
-              </IconContext.Provider>
-              
             </div>
-          <div className="flex justify-between items-center">
-              <div className="flex items-start gap-[10px] text-base font-medium max-w-[340px]">
+            <div className="flex items-start gap-[10px] text-base font-medium w-[100%] sm:max-w-[340px]">
               <input type="checkbox" className="mt-[5px]" />
-              <h5 className="text-[#ffffff]">
-                Remember me
+              <h5 className="text-white">
+                By creating an account you agree to the{" "}
+                <a className="text-[#ffffff]">terms of use</a> and our
+                <a className="text-[#ffffff]"> privacy policy.</a>
               </h5>
             </div>
-            <a href="/recover" className=" text-[#ffffff]">
-            Forgot Password
-              </a>
-          </div>
             <div className="sm:my-6 my-4 ">
               <Button
                 variant="secondary"
                 paddingLess="true"
-                className="w-[100%] h-[48px] text-[#141414] text-base"
+                className="w-[100%] h-[48px] text-[#ffffff] text-base"
               >
-               Login
+                Create account
               </Button>
             </div>
 
-            <h5 className=" text-center text-base font-medium text-[#F7512E]">
-            Already have an account?{" "}
-              <a href="/" className="underline text-[#ffffff]">
+            <h5 className=" text-center text-base font-medium text-white">
+              Already have an account?{" "}
+              <a href="/login" className="underline text-[#ffffff]">
                 Login
               </a>
             </h5>
@@ -110,4 +118,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
