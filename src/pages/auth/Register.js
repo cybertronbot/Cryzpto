@@ -88,7 +88,7 @@ function Register() {
               </Button>
             </div>
 
-            <h5 className=" text-center text-base font-medium text-[#F7512E]">
+            <h5 className=" text-center text-base font-medium text-white">
               Already have an account?{" "}
               <a href="/auth/login" className="underline text-[#ffffff]">
                 Login

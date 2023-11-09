@@ -45,7 +45,7 @@ function Navbar() {
               </div>
             </div>
 
-            <h5 className="text-[#C3C3C3] text-[18px]">Network</h5>
+            <h5 className="text-[#C3C3C3] text-[14px]">Network</h5>
           </div>
         </div>
         <nav className="w-[440px] h-[35px] bg-[#181818] sm:flex hidden justify-center items-center border border-[#969696] rounded-[8px]" >
