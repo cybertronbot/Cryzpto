@@ -45,6 +45,7 @@ function Register() {
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+  const [isLoading,setIsLoading] = useState(false)
   useEffect(() => {
     userFullName.current.focus();
   }, []);
@@ -83,7 +84,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     const v1 = USER_REGEX.test(username);
     const v2 = USER_REGEX.test(fullName);
     const v3 = PWD_REGEX.test(pwd);
@@ -369,7 +370,7 @@ function Register() {
                     }
                     className="bg-[#F7512E] w-full h-[48px] rounded-[6px] sm:rounded-[8px] text-sm font-medium"
                   >
-                    Create Account
+                      {isLoading ? 'Loading...' : 'Create Account'}
                   </button>
                 </div>
 
