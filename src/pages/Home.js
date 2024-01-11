@@ -9,6 +9,8 @@ function Home() {
     <div className='h-[100vh] '>
         <Navbar/>
         <Hero/>
+    <AboutUs/>
+    <Investors/>
       
         
     </div>
