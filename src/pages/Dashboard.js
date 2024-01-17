@@ -36,7 +36,7 @@ function Dashboard() {
               />
             </div>
             <h4 className="text-white sm:flex hidden">Dashboard</h4>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center sm:gap-5 gap-2">
               <div className="flex items-center gap-[2px]">
                 <div className="sm:flex hidden ">
                   <h5 className="text-white">Uroos Fatima</h5>
