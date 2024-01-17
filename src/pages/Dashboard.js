@@ -13,7 +13,7 @@ function Dashboard() {
   return (
     <div>
       <div className="flex  w-full h-screen">
-        <div className=" bg-[#161717] pt-10 min-w-[70px]">
+        <div className="sm:block hidden bg-[#161717] pt-10 min-w-[70px]">
           <div className="flex flex-col items-center gap-[20px]">
             <IconContext.Provider value={{ color: "#8C8C8C", size: "24px" }}>
               <GoHome />
@@ -35,10 +35,10 @@ function Dashboard() {
                 className="h-full w-full outline-none bg-transparent rounded-[24px] pl-[10px]"
               />
             </div>
-            <h4 className="text-white">Dashboard</h4>
+            <h4 className="text-white sm:flex hidden">Dashboard</h4>
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-[2px]">
-                <div>
+                <div className="sm:flex hidden ">
                   <h5 className="text-white">Uroos Fatima</h5>
                   <h6 className="text-[#5E5E5E]">uroos.design@gmail.com</h6>
                 </div>
