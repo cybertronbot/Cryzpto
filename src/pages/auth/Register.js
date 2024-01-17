@@ -85,14 +85,18 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+  
     const v1 = USER_REGEX.test(username);
     const v2 = USER_REGEX.test(fullName);
     const v3 = PWD_REGEX.test(pwd);
     const v5 = EMAIL_REGEX.test(email);
+  
     if (!v1 || !v2 || !v3 || !v5) {
       setErrMsg("Invalid Entry");
+      setIsLoading(false); // Set isLoading back to false since the entry is invalid
       return;
     }
+  
     try {
       const response = await axios.post(
         REGISTER_URL,
@@ -106,8 +110,8 @@ function Register() {
           headers: { "Content-Type": "application/json" },
         }
       );
+  
       console.log(response?.data);
-
       console.log(JSON.stringify(response));
       setSuccess(true);
     } catch (err) {
@@ -121,8 +125,11 @@ function Register() {
         setErrMsg("Registration Failed");
       }
       errRef.current.focus();
+    } finally {
+      setIsLoading(false); 
     }
   };
+  
 
   return (
     <div>

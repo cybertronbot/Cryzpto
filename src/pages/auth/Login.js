@@ -32,8 +32,8 @@ const [isLoading,setIsLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(false)
-
+    setIsLoading(true); // Set isLoading to true before making the request
+  
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -44,7 +44,7 @@ const [isLoading,setIsLoading] = useState(false)
       );
       console.log(JSON.stringify(response?.data));
       console.log(JSON.stringify(response));
-
+  
       setEmail("");
       setPwd("");
       navigate("/dashboard");
@@ -59,9 +59,11 @@ const [isLoading,setIsLoading] = useState(false)
         setErrMsg("Login Failed");
       }
       errRef.current.focus();
+    } finally {
+      setIsLoading(false); 
     }
   };
-
+  
   return (
     <div>
       <div className="w-full h-screen">
@@ -136,6 +138,7 @@ const [isLoading,setIsLoading] = useState(false)
               </div>
               <div className="sm:my-6 my-4 ">
                 <button
+                 onClick={handleSubmit}
                   disabled={isLoading}
                   className="bg-[#F7512E] w-full h-[48px] rounded-[6px] sm:rounded-[8px] text-sm font-medium"
                 >
